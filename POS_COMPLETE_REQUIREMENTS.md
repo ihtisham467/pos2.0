@@ -7,7 +7,7 @@ This requirements document outlines the features and functionality needed for a 
 **Last Updated**: December 2024  
 **Target Audience**: Developers, Business Analysts, Stakeholders  
 **System Type**: Simple, Single-User, Web-Based POS  
-**Technology Stack**: Laravel + Vue.js + Inertia.js + Tailwind CSS + MySQL
+**Technology Stack**: Laravel 12 + Vue 3 + TypeScript + Inertia.js + Tailwind CSS 4 + MySQL
 
 ---
 
@@ -312,13 +312,15 @@ This requirements document outlines the features and functionality needed for a 
 ## 💻 **10. TECHNICAL IMPLEMENTATION**
 
 ### **10.1 Technology Stack**
-- **Backend**: Laravel 11
-- **Frontend**: Vue.js 3 + Inertia.js
-- **Styling**: Tailwind CSS
-- **Database**: MySQL
+- **Backend**: Laravel 12 + PHP 8.2+
+- **Frontend**: Vue 3 + TypeScript + Inertia.js
+- **Styling**: Tailwind CSS 4
+- **Database**: SQLite
 - **Authentication**: Laravel Fortify
-- **PDF Generation**: Laravel DomPDF
-- **Barcode**: Bacon QR Code
+- **Build Tool**: Vite
+- **UI Components**: Reka UI + Lucide Vue Next
+- **Development**: ESLint + Prettier + Pest (Testing)
+- **Additional**: Laravel Wayfinder, Class Variance Authority
 
 ### **10.2 Key Technical Features**
 - **Barcode Integration**
