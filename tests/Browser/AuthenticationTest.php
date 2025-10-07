@@ -1,8 +1,6 @@
 <?php
 
 use App\Models\User;
-use Tests\Browser\Pages\DashboardPage;
-use Tests\Browser\Pages\LoginPage;
 use Tests\DuskTestCase;
 use Laravel\Dusk\Browser;
 
@@ -35,12 +33,12 @@ test('user is redirected to login when not authenticated', function () {
     });
 });
 
-test('user can logout successfully', function () {
+test('authenticated user can access dashboard', function () {
     $user = User::factory()->create();
 
     $this->browse(function (Browser $browser) use ($user) {
         $browser->loginAs($user)
-                ->visit(new DashboardPage)
+                ->visit('/dashboard')
                 ->assertPathIs('/dashboard');
     });
 });
