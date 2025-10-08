@@ -5,19 +5,18 @@ use App\Http\Controllers\Auth\EmailVerificationNotificationController;
 use App\Http\Controllers\Auth\EmailVerificationPromptController;
 use App\Http\Controllers\Auth\NewPasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
-use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('guest')->group(function () {
     // Registration routes completely disabled for single-user POS system
     // Users should only be able to login with pre-created admin account
-    
+
     // Return 403 Forbidden for any registration attempts
     Route::get('register', function () {
         abort(403, 'Registration is disabled for this application');
     });
-    
+
     Route::post('register', function () {
         abort(403, 'Registration is disabled for this application');
     });
